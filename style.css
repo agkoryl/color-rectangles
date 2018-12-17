@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.4em;
+    vertical-align: baseline;
+    text-decoration: none;
+    outline: 0;
+  }
+  
+  h5 {
+      font-size: 1.5em;
+  }
+  
+  button {
+      height: 2em;
+      width: auto;
+      border: none;
+      text-align: center;
+      font-size: 16px;
+      background-color: #dd7396;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #fff6f2;
+  }
+  
+  .button:hover {
+      background-color: #db9bb0;
+  }
+  
+  hr {
+      border: 1px solid #dd7396;
+      margin: 3px;
+  }
+  
+  .main-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff6f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .display {
+    width: 30vw;
+    height: 95vh;
+  }
+  
+  .triangles-display {
+    height: 90%;
+    background-color: FFFCF9;
+    width: inherit;
+    border: 1px solid #dd7396;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .add-display {
+    height: 10%;
+    background-color: #fff6f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .add-button {
+    background-color: #fff6f2;
+    height: 3em;
+    width: 3em;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: #dd7396;
+  }
+  
+  .square {
+    width: 95%;
+    height: 30px;
+    margin: 2px;
+  }
+  
+  .square-large {
+      width: 60%;
+  }
+  
+  .square-small {
+      width: 40%;
+  }
+  
+  .square-pink {
+    background-color: #dd7396;
+  }
+  
+  .square-green {
+    background-color: #7dd181;
+  }
+  
+  .square-violet {
+    background-color: #785589;
+  }
+  
+  .square-blue {
+    background-color: #9bbdf9;
+  }
+  
+  .square-orange {
+    background-color: #FF9B42;
+  }
+  
+  .square-yellow {
+    background-color: #f9e784;
+  }
+  
+  /*Modal styles*/
+  
+  .background {
+     opacity: 0.2;
+      background-color: #dd7396;
+      position: absolute;
+      z-index: 30;
+      width: 100%;
+      height: 100%;
+  }
+  
+  .modal-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 30;
+      width: 100%;
+      height: 100%;
+  }
+  
+  .modal-content {
+      position: relative;
+      background-color: #fff6f2;
+      opacity: 1;
+      width: 35vw;
+      height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  }
+  
+  .modal-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  .close {
+      justify-self: flex-end;
+  }
+  
+  .modal-title {
+      text-align: center;
+  }
+  
+  .modal-body {
+      text-align: center;
+  }
+  
+  .size-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  }
+  
+  .size-container > div {
+      flex-grow: 1;
+      margin: 1px;
+  }
+  
+  .size-select-button {
+      background-color: #6F5E76;
+      padding: 2px 3px;
+      border-radius: 0;
+      width: 100%;
+  }
+  
+  .colors-container-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  }
+  .colors-container-row > div {
+      flex-grow: 1;
+      margin: 1px;
+  }
+  
+  .color-select-button {
+      padding: 2px 3px;
+      border-radius: 0;
+      width: 100%;
+  }

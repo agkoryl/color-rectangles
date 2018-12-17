@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Colourful rectangles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="copy.css" />
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="modal-container">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="">
+            Add a new rectangle
+          </h5>
+          <button class="close">
+            <i class="far fa-times-circle"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div>
+              <label>select size</label>
+              <hr>
+              <div class="size-container">
+                <div><button class="size-select-button">small</button></div>
+                <div><button class="size-select-button">medium</button></div>
+                <div><button class="size-select-button">large</button></div>
+              </div>
+
+            </div>
+            <div>
+              <label>select colour</label>
+              <hr>
+              <div class="colors-container-row">
+                <div><button class="color-select-button square-green"></button></div>
+                <div><button class="color-select-button square-yellow"></button></div>
+                <div><button class="color-select-button square-pink"></button></div>
+              </div>
+              <div class="colors-container-row">
+                <div><button class="color-select-button square-blue"></button></div>
+                <div><button class="color-select-button square-orange"></button></div>
+                <div><button class="color-select-button square-violet"></button></div>
+              </div>
+            </div>
+            <div>
+              <label>select position</label>
+              <hr>
+                <div class="modal-footer">
+                  <button class="create-rectangle-button">
+                    Add your rectangle
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="main-container">
+        <div class="display">
+          <div class="triangles-display">
+            <div class="square square-large square-yellow"></div>
+            <div class="square square-small square-blue"></div>
+            <div class="square square-orange"></div>
+            <div class="square square-large square-pink"></div>
+            <div class="square square-small square-violet"></div>
+            <div class="square square-green"></div>
+          </div>
+          <div class="add-display"><button class="add-button"><i class="far
+                fa-plus-square fa-3x"></i></button></div>
+        </div>
+      </div>
+
+
+
+      <script src="main.js"></script>
+    </body>
+  </html>
