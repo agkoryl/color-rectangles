@@ -6,6 +6,8 @@
   vertical-align: baseline;
   text-decoration: none;
   outline: 0;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+  font-size: 12px;
 }
 
 h5 {
@@ -13,11 +15,11 @@ h5 {
 }
 
 button {
-  height: 2em;
+  height: 3em;
   width: auto;
   border: none;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   background-color: #dd7396;
   padding: 5px 10px;
   border-radius: 5px;
@@ -153,6 +155,15 @@ hr {
   flex-direction: row;
   justify-content: space-between;
 }
+
+.header-container {
+    flex-grow: 6;
+}
+
+.close-container {
+    flex-grow: 1;
+}
+
 .close {
   justify-self: flex-end;
 }
@@ -166,12 +177,15 @@ hr {
 }
 
 .size-container {
+    margin: 5px 0 15px 0;
+}
+.size-options-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.size-container > div {
+.size-options-container > div {
   flex-grow: 1;
   margin: 1px;
 }
@@ -181,6 +195,10 @@ hr {
   padding: 2px 3px;
   border-radius: 0;
   width: 100%;
+}
+
+.colors-container {
+    margin: 0 0 15px 0;
 }
 
 .colors-container-row {
@@ -202,6 +220,7 @@ hr {
 .position-row {
   display: flex;
   flex-direction: row;
+  margin: 5px 0;
 }
 
 .position-row > div {
@@ -218,8 +237,10 @@ hr {
 
 .position-rectangles-container {
   background-color: rgb(219, 185, 233);
+  padding: 3px;
+  font-size: 10px;
 }
 
 .modal-footer {
-  margin: 2px;
+  margin: 15px 0 5px 0;
 }
