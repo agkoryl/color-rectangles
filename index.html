@@ -23,7 +23,7 @@
           </h5>
           </div>
           <div class="close-container">
-          <button class="close" id="close">
+          <button type="button" class="close" id="close">
             <i class="far fa-times-circle"></i>
           </button>
           </div>
@@ -33,33 +33,33 @@
             <div class="size-container">
               <label>select size</label>
               <hr>
-              <div class="size-options-container">
-                <div><button class="size-select-button">small</button></div>
-                <div><button class="size-select-button">medium</button></div>
-                <div><button class="size-select-button">large</button></div>
+              <div class="size-options-container" id="size-options-container">
+                <div><button type="button" data-size="square-small" class="size-select-button">small</button></div>
+                <div><button type="button" data-size="square-medium" class="size-select-button">medium</button></div>
+                <div><button type="button" data-size="square-large" class="size-select-button">large</button></div>
               </div>
 
             </div>
-            <div class="colors-container">
+            <div class="colors-container" id="colors-container">
               <label>select colour</label>
               <hr>
               <div class="colors-container-row">
-                <div><button class="color-select-button square-green"></button></div>
-                <div><button class="color-select-button square-yellow"></button></div>
-                <div><button class="color-select-button square-pink"></button></div>
+                <div><button type="button" data-color="square-green" class="color-select-button square-green"></button></div>
+                <div><button type="button" data-color="square-yellow" class="color-select-button square-yellow"></button></div>
+                <div><button type="button" data-color="square-pink" class="color-select-button square-pink"></button></div>
               </div>
               <div class="colors-container-row">
-                <div><button class="color-select-button square-blue"></button></div>
-                <div><button class="color-select-button square-orange"></button></div>
-                <div><button class="color-select-button square-violet"></button></div>
+                <div><button type="button" data-color="square-blue" class="color-select-button square-blue"></button></div>
+                <div><button type="button" data-color="square-orange" class="color-select-button square-orange"></button></div>
+                <div><button type="button" data-color="square-violet" class="color-select-button square-violet"></button></div>
               </div>
             </div>
             <div>
               <label>select position</label>
               <hr>
-              <div class="position-row">
-              <div><button class="position-select-button">top</button></div>
-              <div><button class="position-select-button">bottom</button></div>
+              <div class="position-row" id="position-row">
+              <div><button type="button" data-position="top" class="position-select-button">top</button></div>
+              <div><button type="button" data-position="bottom" class="position-select-button">bottom</button></div>
               </div>
               <div class="position-row">
               <div class="position-rectangles-container">
@@ -68,7 +68,7 @@
               </div>
                </div>
                 <div class="modal-footer">
-                  <button class="create-rectangle-button">
+                  <button type="button" class="create-rectangle-button" id="create-rectangle-button">
                     Add your rectangle
                   </button>
                 </div>
@@ -79,16 +79,16 @@
 
 
       <div class="main-container">
-        <div class="display">
-          <div class="triangles-display">
-            <div class="square square-large square-yellow"></div>
+        <div class="display" id="display">
+          <div class="rectangles-display" id="rectangles-display">
+            <!-- <div class="square square-large square-yellow"></div>
             <div class="square square-small square-blue"></div>
             <div class="square square-orange"></div>
             <div class="square square-large square-pink"></div>
             <div class="square square-small square-violet"></div>
-            <div class="square square-green"></div>
+            <div class="square square-green"></div> -->
           </div>
-          <div class="add-display"><button class="add-button" id='add-button'><i class="far
+          <div class="add-display"><button type="button" class="add-button" id='add-button'><i class="far
                 fa-plus-square fa-3x"></i></button></div>
         </div>
       </div>

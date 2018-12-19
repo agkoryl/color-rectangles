@@ -47,7 +47,7 @@ hr {
   height: 95vh;
 }
 
-.triangles-display {
+.rectangles-display {
   height: 90%;
   background-color: FFFCF9;
   width: inherit;
@@ -78,12 +78,15 @@ hr {
 }
 
 .square {
-  width: 95%;
   height: 30px;
   margin: 2px;
 }
 
 .square-large {
+  width: 95%;
+}
+
+.square-medium {
   width: 60%;
 }
 
