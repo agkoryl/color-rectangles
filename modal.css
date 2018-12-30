@@ -30,6 +30,7 @@
     display: flex;
     flex-direction: column;
     padding: 15px;
+    font-weight: bold;
   }
   
   .modal-header {
@@ -50,9 +51,16 @@
   }
   
   .close {
-    padding: 2px;
     height: 30px;
     width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close-icon {
+    color: white;
+    font-size: 1.5em;
   }
   
   .close:hover {
@@ -123,9 +131,6 @@
   .color-select-button:hover {
     filter: brightness(120%);
   }
-.color-select-button-active {
-  margin: 0;
-}
   
   .position-row {
     display: flex;
@@ -165,10 +170,12 @@
     position: absolute;
     left: 10px;
     top: 50%;                      
-   transform: translate(0, -50%)
+   transform: translate(0, -50%);
+   color: white;
   }
   
   .color-check-icon {
 position: relative;
 display: inline-block;
+color: white;
   }

@@ -6,8 +6,9 @@
   vertical-align: baseline;
   text-decoration: none;
   outline: 0;
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #838e91;
 }
 
 h5 {
