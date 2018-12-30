@@ -39,11 +39,12 @@
   }
   
   .header-container {
-    flex-grow: 6;
+    flex-grow: 7;
+    padding-left: 30px;
   }
   
   .close-container {
-    flex-grow: 1;
+    width: 30px;
     display: flex;
     justify-content: flex-end;
   }
@@ -89,6 +90,7 @@
     padding: 2px 3px;
     border-radius: 0;
     width: 100%;
+    position: relative;
   }
   
   .size-select-button:hover {
@@ -102,22 +104,28 @@
   .colors-container-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .colors-container-row > div {
     flex-grow: 1;
-    margin: 1px;
+    margin: 2px 5px;
+    flex-basis: 33.3%;
   }
   
   .color-select-button {
-    padding: 2px 3px;
     border-radius: 0;
     width: 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
   }
   
   .color-select-button:hover {
     filter: brightness(120%);
   }
+.color-select-button-active {
+  margin: 0;
+}
   
   .position-row {
     display: flex;
@@ -128,6 +136,7 @@
   .position-row > div {
     flex-grow: 1;
     margin: 1px;
+    flex-basis: 50%;
   }
   
   .position-select-button {
@@ -135,6 +144,7 @@
     padding: 2px 3px;
     border-radius: 0;
     width: 100%;
+    position: relative;
   }
   
   .position-select-button:hover {
@@ -150,4 +160,15 @@
   .modal-footer {
     margin: 15px 0 5px 0;
   }
+
+  .check-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;                      
+   transform: translate(0, -50%)
+  }
   
+  .color-check-icon {
+position: relative;
+display: inline-block;
+  }

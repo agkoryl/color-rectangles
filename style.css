@@ -76,6 +76,9 @@ hr {
   color: #dd7396;
   padding: 0;
 }
+.add-button:hover {
+  filter: brightness(120%);
+}
 
 .square {
   height: 30px;
