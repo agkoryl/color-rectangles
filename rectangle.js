@@ -5,9 +5,9 @@ var Rectangle = (function() {
     this.index = index;
   }
 
-Rectangle.prototype.setIndex = function(index) {
+  Rectangle.prototype.setIndex = function(index) {
     this.index = index;
-}
+  };
 
   return Rectangle;
 })();
@@ -61,20 +61,15 @@ document
   .querySelector("#position-row")
   .addEventListener("click", function(button) {
     if (button.target && button.target.nodeName == "BUTTON") {
-      let buttons = document.querySelectorAll("#position-row button");
-
       if (button.target.dataset.position == "top") {
-          index = -1;
+        index = -1;
       } else if (button.target.dataset.position == "bottom") {
-          index = container.rectangleSet.length;
+        index = container.rectangleSet.length;
       }
 
+      removeElementCheckIcon();
 
-      buttons.forEach(function(positionButton) {
-        if (positionButton.firstChild.nodeName == "I") {
-          positionButton.removeChild(positionButton.firstChild);
-        }
-      });
+      removeElementCheckClass();
 
       let icon = document.createElement("i");
       icon.classList.add("fas", "fa-check", "check-icon");
@@ -82,3 +77,34 @@ document
     }
   });
 
+document
+  .querySelector("#position-rectangles-body")
+  .addEventListener("click", function(button) {
+    if (button.target && button.target.nodeName == "BUTTON") {
+      if (button.target.dataset.index) {
+        index = parseInt(button.target.dataset.index) + 1;
+      }
+
+      removeElementCheckClass();
+      removeElementCheckIcon();
+      button.target.classList.add("position-checked");
+    }
+  });
+
+const removeElementCheckClass = function() {
+  let buttons = document.querySelectorAll("#position-rectangles-body button");
+  buttons.forEach(function(positionButton) {
+    if (positionButton.classList.contains("position-checked")) {
+      positionButton.classList.remove("position-checked");
+    }
+  });
+};
+
+const removeElementCheckIcon = function() {
+  let buttons = document.querySelectorAll("#position-row button");
+  buttons.forEach(function(positionButton) {
+    if (positionButton.firstChild.nodeName == "I") {
+      positionButton.removeChild(positionButton.firstChild);
+    }
+  });
+};

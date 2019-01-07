@@ -41,13 +41,19 @@ var Container = (function() {
   };
 
   Container.prototype.addRectangle = function(rectangle) {
-    this.rectangleSet.push(rectangle);
-
-    if (rectangle.index == "-1") {
+   
+    if (rectangle.index == -1) {
       this.rectangleSet.forEach(function(rec) {
         rec.index += 1;
       });
+      rectangle.index = 0;
+    } else if (rectangle.index < this.rectangleSet.length) {
+for (let i = rectangle.index; i < this.rectangleSet.length; i++) {
+  this.rectangleSet[i].index +=1; 
+}
     }
+
+    this.rectangleSet.push(rectangle);
 
     this.rectangleSet.sort(function(rectangleOne, rectangleTwo) {
       return rectangleOne.index - rectangleTwo.index;

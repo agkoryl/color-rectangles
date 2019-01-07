@@ -46,6 +46,8 @@ function addExistingRectangleToPositionRow(index, rectangleColor) {
 
   positionRectangleButton.classList.add(color);
   positionRectangleButton.innerHTML = index;
+  positionRectangleButton.setAttribute("data-index", index);
+  positionRectangleButton.setAttribute("type", "button");
 }
 
 document
@@ -54,3 +56,4 @@ document
     container.addRectangle(new Rectangle(size, color, index));
     closeModal();
   });
+
