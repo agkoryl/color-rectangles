@@ -55,7 +55,7 @@ document
     }
   });
 
-let index = "";
+let index = 0;
 
 document
   .querySelector("#position-row")
@@ -64,9 +64,9 @@ document
       let buttons = document.querySelectorAll("#position-row button");
 
       if (button.target.dataset.position == "top") {
-index = "-1";
+          index = -1;
       } else if (button.target.dataset.position == "bottom") {
-          index = container.rectangleSet.length.toString();
+          index = container.rectangleSet.length;
       }
 
 

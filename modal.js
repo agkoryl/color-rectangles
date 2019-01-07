@@ -4,6 +4,7 @@ var closeModal = function closeModal() {
 };
 
 var openModal = function openModal() {
+  populatePositionRow();
   document.querySelector("#background").style.visibility = "visible";
   document.querySelector("#modal-container").style.visibility = "visible";
   clearCheckedElementsInModal();

@@ -12,37 +12,47 @@ var Container = (function() {
       rectangleElement.classList.add("square");
       rectangleElement.classList.add(rectangle.size);
       rectangleElement.classList.add(rectangle.color);
-      rectangleElement.setAttribute("data-index", index);
+      rectangleElement.setAttribute("data-index", rectangle.index);
 
-      if (rectangle.size && rectangle.color && rectangle.index) {
-
+      if (rectangle.size && rectangle.color) {
         this.container.appendChild(rectangleElement);
-//         this.container.insertBefore(
-//           rectangleElement,
-//           this.container.firstChild
-//         );
-//         rectangleElement.setAttribute("data-index", "-1");
-        
-// //         let positionIndex = parseInt(rectangleElement.getAttribute("data-index"));
-// //         let newPositionIndex = positionIndex + 1;
-       
-// // rectangleElement.setAttribute("data-index", newPositionIndex.toString());
+        //         this.container.insertBefore(
+        //           rectangleElement,
+        //           this.container.firstChild
+        //         );
+        //         rectangleElement.setAttribute("data-index", "-1");
 
-//       } else if (
-//         rectangle.size &&
-//         rectangle.color &&
-//         rectangle.position === "bottom"
-//       ) {
-//         this.container.appendChild(rectangleElement);
+        // //         let positionIndex = parseInt(rectangleElement.getAttribute("data-index"));
+        // //         let newPositionIndex = positionIndex + 1;
 
-//         let newRectangleIndex = parseInt(this.container.container.lastChild.getAttribute("data-index")) +1;
-//         rectangleElement.setAttribute("data-index", newRectangleIndex);
+        // // rectangleElement.setAttribute("data-index", newPositionIndex.toString());
+
+        //       } else if (
+        //         rectangle.size &&
+        //         rectangle.color &&
+        //         rectangle.position === "bottom"
+        //       ) {
+        //         this.container.appendChild(rectangleElement);
+
+        //         let newRectangleIndex = parseInt(this.container.container.lastChild.getAttribute("data-index")) +1;
+        //         rectangleElement.setAttribute("data-index", newRectangleIndex);
       }
     }, this);
   };
 
   Container.prototype.addRectangle = function(rectangle) {
     this.rectangleSet.push(rectangle);
+
+    if (rectangle.index == "-1") {
+      this.rectangleSet.forEach(function(rec) {
+        rec.index += 1;
+      });
+    }
+
+    this.rectangleSet.sort(function(rectangleOne, rectangleTwo) {
+      return rectangleOne.index - rectangleTwo.index;
+    });
+
     this.render();
   };
 
