@@ -16,44 +16,37 @@ var Container = (function() {
 
       if (rectangle.size && rectangle.color) {
         this.container.appendChild(rectangleElement);
-        //         this.container.insertBefore(
-        //           rectangleElement,
-        //           this.container.firstChild
-        //         );
-        //         rectangleElement.setAttribute("data-index", "-1");
-
-        // //         let positionIndex = parseInt(rectangleElement.getAttribute("data-index"));
-        // //         let newPositionIndex = positionIndex + 1;
-
-        // // rectangleElement.setAttribute("data-index", newPositionIndex.toString());
-
-        //       } else if (
-        //         rectangle.size &&
-        //         rectangle.color &&
-        //         rectangle.position === "bottom"
-        //       ) {
-        //         this.container.appendChild(rectangleElement);
-
-        //         let newRectangleIndex = parseInt(this.container.container.lastChild.getAttribute("data-index")) +1;
-        //         rectangleElement.setAttribute("data-index", newRectangleIndex);
       }
     }, this);
   };
 
   Container.prototype.addRectangle = function(rectangle) {
-   
     if (rectangle.index == -1) {
       this.rectangleSet.forEach(function(rec) {
         rec.index += 1;
       });
       rectangle.index = 0;
     } else if (rectangle.index < this.rectangleSet.length) {
-for (let i = rectangle.index; i < this.rectangleSet.length; i++) {
-  this.rectangleSet[i].index +=1; 
-}
+      for (let i = rectangle.index; i < this.rectangleSet.length; i++) {
+        this.rectangleSet[i].index += 1;
+      }
     }
 
     this.rectangleSet.push(rectangle);
+
+    this.rectangleSet.sort(function(rectangleOne, rectangleTwo) {
+      return rectangleOne.index - rectangleTwo.index;
+    });
+
+    this.render();
+  };
+
+  Container.prototype.removeRectangle = function(rectangleIndex) {
+    this.rectangleSet.splice(rectangleIndex, 1);
+
+    for (let i = rectangleIndex; i < this.rectangleSet.length; i++) {
+      this.rectangleSet[i].index -= 1;
+    }
 
     this.rectangleSet.sort(function(rectangleOne, rectangleTwo) {
       return rectangleOne.index - rectangleTwo.index;

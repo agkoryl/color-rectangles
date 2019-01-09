@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="modal.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="modalRemove.css"
+      />
     <link rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
       integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
@@ -17,15 +19,15 @@
     <div class="modal-container" id="modal-container">
       <div class="modal-content">
         <div class="modal-header">
-        <div class="header-container">
-          <h5 class="modal-title" id="">
-            Add a new rectangle
-          </h5>
+          <div class="header-container">
+            <h5 class="modal-title" id="">
+              Add a new rectangle
+            </h5>
           </div>
           <div class="close-container">
-          <button type="button" class="close" id="close">
-            <i class="far fa-times-circle close-icon"></i>
-          </button>
+            <button type="button" class="close" id="close">
+              <i class="far fa-times-circle close-icon"></i>
+            </button>
           </div>
         </div>
         <div class="modal-body" id="modal-body">
@@ -34,9 +36,12 @@
               <label>select size</label>
               <hr>
               <div class="size-options-container" id="size-options-container">
-                <div><button type="button" data-size="square-small" class="size-select-button">small</button></div>
-                <div><button type="button" data-size="square-medium" class="size-select-button">medium</button></div>
-                <div><button type="button" data-size="square-large" class="size-select-button">large</button></div>
+                <div><button type="button" data-size="square-small"
+                    class="size-select-button">small</button></div>
+                <div><button type="button" data-size="square-medium"
+                    class="size-select-button">medium</button></div>
+                <div><button type="button" data-size="square-large"
+                    class="size-select-button">large</button></div>
               </div>
 
             </div>
@@ -44,64 +49,109 @@
               <label>select colour</label>
               <hr>
               <div class="colors-container-row" id="colors-container-row">
-                <div><button type="button" data-color="square-green" class="color-select-button square-green"></button></div>
-                <div><button type="button" data-color="square-yellow" class="color-select-button square-yellow"></button></div>
-                <div><button type="button" data-color="square-pink" class="color-select-button square-pink"></button></div>
+                <div><button type="button" data-color="square-green"
+                    class="color-select-button square-green"></button></div>
+                <div><button type="button" data-color="square-yellow"
+                    class="color-select-button square-yellow"></button></div>
+                <div><button type="button" data-color="square-pink"
+                    class="color-select-button square-pink"></button></div>
               </div>
               <div class="colors-container-row" id="colors-container-row">
-                <div><button type="button" data-color="square-blue" class="color-select-button square-blue"></button></div>
-                <div><button type="button" data-color="square-orange" class="color-select-button square-orange"></button></div>
-                <div><button type="button" data-color="square-violet" class="color-select-button square-violet"></button></div>
+                <div><button type="button" data-color="square-blue"
+                    class="color-select-button square-blue"></button></div>
+                <div><button type="button" data-color="square-orange"
+                    class="color-select-button square-orange"></button></div>
+                <div><button type="button" data-color="square-violet"
+                    class="color-select-button square-violet"></button></div>
               </div>
             </div>
             <div>
               <label>select position</label>
               <hr>
               <div class="position-row" id="position-row">
-              <div><button type="button" data-position="top" class="position-select-button">top</button></div>
-              <div><button type="button" data-position="bottom" class="position-select-button">bottom</button></div>
+                <div><button type="button" data-position="top"
+                    class="position-select-button">top</button></div>
+                <div><button type="button" data-position="bottom"
+                    class="position-select-button">bottom</button></div>
               </div>
               <div class="position-row">
-              <div class="position-rectangles-container" id="position-rectangles-container">
-                <span>
+                <div class="position-rectangles-container"
+                  id="position-rectangles-container">
+                  <span>
                     <p>or, select after which element to place</p>
-                </span>
-                <div class="position-rectangles-body" id="position-rectangles-body">
-                  
+                  </span>
+                  <div class="position-rectangles-body"
+                    id="position-rectangles-body">
+
+                  </div>
                 </div>
               </div>
-              </div>
-               </div>
-                <div class="modal-footer">
-                  <button type="button" class="create-rectangle-button" id="create-rectangle-button">
-                    Add your rectangle
-                  </button>
-                </div>
-              </form>
-          </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="create-rectangle-button"
+                id="create-rectangle-button">
+                Add your rectangle
+              </button>
+            </div>
+          </form>
         </div>
       </div>
+    </div>
 
-
-      <div class="main-container">
-        <div class="display" id="display">
-          <div class="rectangles-display" id="rectangles-display">
-            <!-- <div class="square square-large square-yellow"></div>
-            <div class="square square-small square-blue"></div>
-            <div class="square square-orange"></div>
-            <div class="square square-large square-pink"></div>
-            <div class="square square-small square-violet"></div>
-            <div class="square square-green"></div> -->
+    <div class="background" id="background-remove"></div>
+    <div class="modal-container" id="modal-container-remove">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="header-container">
+            <h5 class="modal-title">
+              Choose rectangle
+            </h5>
           </div>
-          <div class="add-display"><button type="button" class="add-button" id='add-button'><i class="far
-                fa-plus-square fa-3x"></i></button></div>
+          <div class="close-container">
+            <button type="button" class="close" id="close-remove">
+              <i class="far fa-times-circle close-icon"></i>
+            </button>
+          </div>
+        </div>
+        <div class="modal-body-remove" id="modal-body-remove">
+          <form>
+            <div class="remove-rectangles-display"
+              id="remove-rectangles-display">
+
+            </div>
+
+            <div class="modal-footer-remove">
+              <button type="button" class="create-rectangle-button"
+                id="remove-rectangle-button">
+                Remove selected rectangle
+              </button>
+            </div>
+          </form>
         </div>
       </div>
+    </div>
+
+
+    <div class="main-container">
+      <div class="display" id="display">
+        <div class="rectangles-display" id="rectangles-display">
+        </div>
+        <div class="add-display"><button type="button" class="add-button"
+            id='add-button'><i class="far
+              fa-plus-square fa-3x main-icon"></i></button>
+          <button type="button" class="add-button"
+            id="remove-button"><i class="far
+              fa-minus-square fa-3x main-icon"></i></button></div>
+      </div>
+    </div>
 
 
 
-      <script src="main.js"></script>
-      <script src="rectangle.js"></script>
-      <script src="modal.js"></script>
-    </body>
-  </html>
+    <script src="main.js"></script>
+    <script src="rectangle.js"></script>
+    <script src="modal.js"></script>
+    <script src="modalRemove.js"></script>
+
+
+  </body>
+</html>

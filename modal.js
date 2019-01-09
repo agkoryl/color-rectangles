@@ -56,4 +56,3 @@ document
     container.addRectangle(new Rectangle(size, color, index));
     closeModal();
   });
-

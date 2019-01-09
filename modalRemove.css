@@ -1,0 +1,31 @@
+.remove-rectangles-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+.remove-rectangles-display > div {
+  width: 80%;
+}
+
+.remove-rectangle {
+  width: 100%;
+  margin: 2px;
+}
+
+.remove-rectangle:hover {
+  filter: brightness(120%);
+}
+
+.modal-footer-remove {
+    display: flex;
+    justify-content: center;
+}
+
+.to-remove-checked {
+    filter: brightness(120%);
+  }
